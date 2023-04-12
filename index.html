@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- metadata -->
+    <meta charset="utf-8" />
+    <meta name="description" content="Fahrenheit to Celsius" />
+    <meta name="keywords" content="immaculata, ics2o" />
+    <meta name="author" content="Santiago Hewett" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon code -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <!-- MDL connector -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-blue.min.css" />
+    <!-- CSS connector -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Title -->
+    <title>Fahrenheit to Celsius</title>
+  </head>
+  <body>
+    <!-- JS connector -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- MDL header -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Calculating Fahrenheit to Celsius</span>
+        </div>
+      </header>
+        <!-- Fahrenheit to Celsius image -->
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+              <img src="./images/convert-fahrenheit-to-celsius-formula-.webp" alt="Fahrenheit to Celsius" width="75%" height="auto"/>
+              <!-- Request -->
+              <h5>Enter the Fahrenheit:</h5>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          Entre your goals per game:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="goalsPerGame"
+            />
+            <label class="mdl-textfield__label" for="goalsPerGame">Goals per game...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+              <!-- Numeric Textfield -->
+              <form action="#">
+                Entre your games played:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="gamesPlayed"
+            />
+            <label class="mdl-textfield__label" for="gamesPlayed">Games played...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+              
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          type="Submit" onclick="calculate()"
+        >
+          Calculate
+        </button>
+        <br />
+              <!-- Answer display -->
+              <h4>
+                <div id="degreesInCelsius"></div>
+              </h4>
+      </main>
+    </div>
+  </body>
+</html>
