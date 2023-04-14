@@ -3,7 +3,7 @@
   <head>
     <!-- metadata -->
     <meta charset="utf-8" />
-    <meta name="description" content="Fahrenheit to Celsius" />
+    <meta name="description" content="Goals and assists to become the greatest soccer player" />
     <meta name="keywords" content="immaculata, ics2o" />
     <meta name="author" content="Santiago Hewett" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +18,7 @@
     <!-- CSS connector -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Title -->
-    <title>Fahrenheit to Celsius</title>
+    <title>Goals and assists to become the greatest soccer player</title>
   </head>
   <body>
     <!-- JS connector -->
@@ -28,59 +28,108 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Calculating Fahrenheit to Celsius</span>
+          <span class="mdl-layout-title">Goals and Assists to Become the Greatest Soccer Player</span>
         </div>
       </header>
-        <!-- Fahrenheit to Celsius image -->
+      <!-- Ronaldo image -->
       <main class="mdl-layout__content">
         <table>
           <tr>
             <th>
-              <img src="./images/convert-fahrenheit-to-celsius-formula-.webp" alt="Fahrenheit to Celsius" width="75%" height="auto"/>
-              <!-- Request -->
-              <h5>Enter the Fahrenheit:</h5>
-        <!-- Numeric Textfield -->
-        <form action="#">
-          Entre your goals per game:
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="goalsPerGame"
-            />
-            <label class="mdl-textfield__label" for="goalsPerGame">Goals per game...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-              <!-- Numeric Textfield -->
+              <img src="./images/Ronaldo.webp" alt="Ronaldo" width="75%" height="auto"/>
+              <!-- Request 1 -->
+              <h5>Enter What is Asked:</h5>
+              <!-- Numeric Textfield 1 -->
+              <form action="#">
+                Entre your goals per game:
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    pattern="-?[0-9]*(\.[0-9]+)?"
+                    id="goalsPerGame"
+                  />
+                  <label class="mdl-textfield__label" for="goalsPerGame">Goals per game...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+              </form>
+              <!-- Numeric Textfield 2 -->
               <form action="#">
                 Entre your games played:
-          <div class="mdl-textfield mdl-js-textfield">
-            <input
-              class="mdl-textfield__input"
-              type="text"
-              pattern="-?[0-9]*(\.[0-9]+)?"
-              id="gamesPlayed"
-            />
-            <label class="mdl-textfield__label" for="gamesPlayed">Games played...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input
+                    class="mdl-textfield__input"
+                    type="text"
+                    pattern="-?[0-9]*(\.[0-9]+)?"
+                    id="gamesPlayedGoals"
+                  />
+                  <label class="mdl-textfield__label" for="gamesPlayedGoals">Games played...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+              </form>
               
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="Submit" onclick="calculate()"
-        >
-          Calculate
-        </button>
-        <br />
-              <!-- Answer display -->
+              <!-- Raised button with ripple 1 -->
+              <button
+                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                type="Submit" onclick="calculateGoals()">
+                Calculate
+              </button>
+              <br />
+              <!-- Answer display 1 -->
               <h4>
-                <div id="degreesInCelsius"></div>
+                <div id="goalsNeeded"></div>
               </h4>
-      </main>
-    </div>
+              
+              <!-- Request 2 -->
+              <h5>Enter What is Asked:</h5>
+              <!-- Messi image -->
+              <main class="mdl-layout__content">
+                <table>
+                  <tr>
+                    <th>
+                      <img src="./images/messi_image.jpg" alt="Messi" width="75%" height="auto"/>
+                      <!-- Numeric Textfield 3 -->
+                      <form action="#">
+                        Entre your assists per game:
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <input
+                            class="mdl-textfield__input"
+                            type="text"
+                            pattern="-?[0-9]*(\.[0-9]+)?"
+                            id="assistsPerGame"
+                          />
+                          <label class="mdl-textfield__label" for="assistsPerGame">Assists per game...</label>
+                          <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                      </form>
+                      <!-- Numeric Textfield 4 -->
+                      <form action="#">
+                        Entre your games played:
+                        <div class="mdl-textfield mdl-js-textfield">
+                          <input
+                            class="mdl-textfield__input"
+                            type="text"
+                            pattern="-?[0-9]*(\.[0-9]+)?"
+                            id="gamesPlayedAssists"
+                          />
+                          <label class="mdl-textfield__label" for="gamesPlayedAssists">Games played...</label>
+                          <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                      </form>
+                      
+                      <!-- Raised button with ripple 2 -->
+                      <button
+                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          type="Submit" onclick="calculateAssists()"
+                        >
+                        Calculate
+                      </button>
+                      <br />
+                      <!-- Answer display 2 -->
+                      <h4>
+                        <div id="assistsNeeded"></div>
+                      </h4>
+              </main>
+        </div>
   </body>
 </html>
