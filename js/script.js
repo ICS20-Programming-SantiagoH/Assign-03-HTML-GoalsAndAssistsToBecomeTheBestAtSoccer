@@ -8,56 +8,54 @@
 /**
  * This function calculates the Amount of goals and assists neede to become to soccer player ever.
  */
-function calculateGoals() {  
+function calculateGoalsAndAssits() {  
   
   // initialize variables
-  let statmentGoals1 = ""
-  let statmentGoals2 = ""
+  let resultGoals = ""
+  let resultAssists = ""
   
   // Data being collected 
   let goalsPerGame = parseFloat(document.getElementById('goalsPerGame').value);
-  let gamesPlayedGoals = parseFloat(document.getElementById('gamesPlayedGoals').value);
+  let gamesPlayed = parseFloat(document.getElementById('gamesPlayed').value);
+  let assistsPerGame = parseFloat(document.getElementById('assistsPerGame').value);
   
-  //Data being processed
+  //Data being calculated for goals and assists
   let goals = goalsPerGame * gamesPlayed;
   let goalsToBeTheBestAtGoals = goals - 834;
-
-  // If statments
-  if (goalsToBeTheBestAtGoals > 834) {
-    statmentGoals1 = "Congratulations, you are already the best goal scorer!"
-  }
-
-  if (goalsToBeTheBestAtGoals < 0) {
-    statmentGoals2 = "goalsToBeTheBestAtGoals * -1"
-  }
-  
-  // Data being shown
-  document.getElementById('goalsNeeded').innerHTML = 'You need ' + goalsToBeTheBestAtGoals.toFixed(2) + 'goals to become the greatest goal scorer of all time'
-}
-
-function calculateAssists() {  
-  
-  // initialize variables
-  let statmentAssists1 = ""
-  let statmentAssists2 = ""
-  
-  // Data being collected 
-  let assistsPerGame = parseFloat(document.getElementById('assistsPerGame').value);
-  let gamesPlayedAssists = parseFloat(document.getElementById('gamesPlayedAssists').value);
-  
-  //Data being processed
-  let assists = assistsPerGame * gamesPlayedAssists;
+  let assists = assistsPerGame * gamesPlayed;
   let assistsToBeTheBestAtAssists = assists - 300;
 
-  // If statments
-  if (assistsToBeTheBestAtAssists > 300) {
-    statment = "Congratulations, you are already the best assister!"
-  }
 
-  if (assistsToBeTheBestAtAssists < 0) {
-    statmentAssists2 = "assistsToBeTheBestAtAssists * -1"
+  // If statments for goals
+  if (goalsToBeTheBestAtGoals > 834) {
+    resultGoals = "Congratulations, you are already the best goal scorer!"
+  }
+  else {
+
+    if (goalsToBeTheBestAtGoals < 0) {
+      goalsToBeTheBestAtGoals = goalsToBeTheBestAtGoals * -1
+      resultGoals = 'You need ' + goalsToBeTheBestAtGoals.toFixed(0) + ' goals to become the greatest goal scorer of all time.'
+    }
+    else {
+      resultGoals =  'You need ' + goalsToBeTheBestAtGoals.toFixed(0) + ' goals to become the greatest goal scorer of all time.'
+    }
   }
   
-  // Data being shown
-  document.getElementById('assistsNeeded').innerHTML = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(2) + ' assists to become to greatest assister of all time.'
+  // If statments for assists
+  if (assistsToBeTheBestAtAssists > 300) {
+    resultAssists = "Congratulations, you are already the best assister!"
+  }
+  else {
+
+    if (assistsToBeTheBestAtAssists < 0) {
+      assistsToBeTheBestAtAssists = assistsToBeTheBestAtAssists * -1
+      resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become to greatest assister of all time.'
+    }
+    else {
+    resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become to greatest assister of all time.'
+    }
+  }
+
+  document.getElementById('goalsNeeded').innerHTML = resultGoals
+  document.getElementById('assistsNeeded').innerHTML = resultAssists
 }

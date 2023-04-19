@@ -37,98 +37,50 @@
           <tr>
             <th>
               <img src="./images/Ronaldo.webp" alt="Ronaldo" width="75%" height="auto"/>
-              <!-- Request 1 -->
-              <h5>Enter What is Asked:</h5>
-              <!-- Numeric Textfield 1 -->
-              <form action="#">
-                Entre your goals per game:
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input
-                    class="mdl-textfield__input"
-                    type="text"
-                    pattern="-?[0-9]*(\.[0-9]+)?"
-                    id="goalsPerGame"
-                  />
-                  <label class="mdl-textfield__label" for="goalsPerGame">Goals per game...</label>
-                  <span class="mdl-textfield__error">Input is not a number!</span>
-                </div>
-              </form>
-              <!-- Numeric Textfield 2 -->
-              <form action="#">
-                Entre your games played:
-                <div class="mdl-textfield mdl-js-textfield">
-                  <input
-                    class="mdl-textfield__input"
-                    type="text"
-                    pattern="-?[0-9]*(\.[0-9]+)?"
-                    id="gamesPlayedGoals"
-                  />
-                  <label class="mdl-textfield__label" for="gamesPlayedGoals">Games played...</label>
-                  <span class="mdl-textfield__error">Input is not a number!</span>
-                </div>
-              </form>
-              
-              <!-- Raised button with ripple 1 -->
-              <button
-                class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                type="Submit" onclick="calculateGoals()">
-                Calculate
-              </button>
-              <br />
-              <!-- Answer display 1 -->
-              <h4>
-                <div id="goalsNeeded"></div>
-              </h4>
-              
-              <!-- Request 2 -->
-              <h5>Enter What is Asked:</h5>
+
               <!-- Messi image -->
               <main class="mdl-layout__content">
                 <table>
                   <tr>
                     <th>
                       <img src="./images/messi_image.jpg" alt="Messi" width="75%" height="auto"/>
-                      <!-- Numeric Textfield 3 -->
-                      <form action="#">
-                        Entre your assists per game:
-                        <div class="mdl-textfield mdl-js-textfield">
-                          <input
-                            class="mdl-textfield__input"
-                            type="text"
-                            pattern="-?[0-9]*(\.[0-9]+)?"
-                            id="assistsPerGame"
-                          />
-                          <label class="mdl-textfield__label" for="assistsPerGame">Assists per game...</label>
-                          <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                      </form>
-                      <!-- Numeric Textfield 4 -->
-                      <form action="#">
-                        Entre your games played:
-                        <div class="mdl-textfield mdl-js-textfield">
-                          <input
-                            class="mdl-textfield__input"
-                            type="text"
-                            pattern="-?[0-9]*(\.[0-9]+)?"
-                            id="gamesPlayedAssists"
-                          />
-                          <label class="mdl-textfield__label" for="gamesPlayedAssists">Games played...</label>
-                          <span class="mdl-textfield__error">Input is not a number!</span>
-                        </div>
-                      </form>
                       
-                      <!-- Raised button with ripple 2 -->
-                      <button
-                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="Submit" onclick="calculateAssists()"
-                        >
-                        Calculate
-                      </button>
-                      <br />
-                      <!-- Answer display 2 -->
-                      <h4>
-                        <div id="assistsNeeded"></div>
-                      </h4>
+              <!-- Request 1 -->
+              <h5>Enter What is Asked:</h5>
+              <!-- Numeric Textfield 1 -->
+                      <form action=" javascript: calculateGoalsAndAssits()">
+          <label for="goalsPerGame">Entre your goals per game:</label>
+          <input type="number" id="goalsPerGame" placeholder="ex. 0.3" step="0.1"><br><br>
+                        
+              <!-- Numeric Textfield 2 -->
+                      <form action=" javascript: calculateGoalsAndAssits()">
+          <label for="gamesPlayed">Entre your games played:</label>
+          <input type="number" id="gamesPlayed" placeholder="ex.4" step="1" min="1"><br><br>
+
+                      <!-- Numeric Textfield 3 -->
+                        <form action=" javascript: calculateGoalsAndAssits()">
+          <label for="assistsPerGame">Entre your assists per game:</label>
+          <input type="number" id="assistsPerGame" placeholder="ex. 0.5" step="0.1"><br><br>
+          <input type="submit" value="Calculate">
+              
+              <!-- Answer display 1 -->
+              <h4>
+                <div id="goalsNeeded"></div>
+              </h4>
+              <br />
+                          <!-- Answer display 2 -->
+                          <h4>
+                            <div id="assistsNeeded"></div>
+                          </h4>
+                          <!-- Answer display 1 -->
+              <h4>
+                <div id="resultGoals"></div>
+              </h4>
+              <br />
+                          <!-- Answer display 2 -->
+                          <h4>
+                            <div id="resultAssists"></div>
+                          </h4>
               </main>
         </div>
   </body>
