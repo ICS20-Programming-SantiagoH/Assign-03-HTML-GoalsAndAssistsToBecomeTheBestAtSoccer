@@ -6,7 +6,7 @@
 
 "use strict";
 /**
- * This function calculates the Amount of goals and assists neede to become to soccer player ever.
+ * This function calculates the Amount of goals and assists needed to become the soccer player ever.
  */
 function calculateGoalsAndAssits() {  
   
@@ -26,7 +26,7 @@ function calculateGoalsAndAssits() {
   let assistsToBeTheBestAtAssists = assists - 300;
 
 
-  // If statments for goals
+  // If statements for goals
   if (goalsToBeTheBestAtGoals > 834) {
     resultGoals = "Congratulations, you are already the best goal scorer!"
   }
@@ -41,7 +41,7 @@ function calculateGoalsAndAssits() {
     }
   }
   
-  // If statments for assists
+  // If statements for assists
   if (assistsToBeTheBestAtAssists > 300) {
     resultAssists = "Congratulations, you are already the best assister!"
   }
@@ -49,10 +49,10 @@ function calculateGoalsAndAssits() {
 
     if (assistsToBeTheBestAtAssists < 0) {
       assistsToBeTheBestAtAssists = assistsToBeTheBestAtAssists * -1
-      resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become to greatest assister of all time.'
+      resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become the greatest assister of all time.'
     }
     else {
-    resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become to greatest assister of all time.'
+    resultAssists = 'You need  ' + assistsToBeTheBestAtAssists.toFixed(0) + ' assists to become the greatest assister of all time.'
     }
   }
 
